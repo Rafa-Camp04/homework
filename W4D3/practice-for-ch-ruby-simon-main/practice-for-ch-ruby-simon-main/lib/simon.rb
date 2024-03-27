@@ -31,12 +31,22 @@ class Simon
 
   def show_sequence
     self.add_random_color
+
+    seq.each do |color|
+      puts color
+    end
   end
 
   def require_sequence
 
+    arr = []
 
+    sequence_length.times do
+      p "Enter a color"
+      arr << gets.chomp
+    end
 
+    arr
   end
 
   def add_random_color
@@ -46,7 +56,7 @@ class Simon
   end
 
   def round_success_message
-    puts "Congrats!!!"
+    puts "Congrats!!! Get ready for the next round..."
   end
 
   def game_over_message
